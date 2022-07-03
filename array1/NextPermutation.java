@@ -1,4 +1,4 @@
-package arrays;
+package array1;
 
 /**
  * <a href="https://leetcode.com/problems/next-permutation/">Problem</a>

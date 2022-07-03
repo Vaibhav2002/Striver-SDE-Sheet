@@ -1,4 +1,4 @@
-package arrays;
+package array1;
 
 /**
 * <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">Problem</a>

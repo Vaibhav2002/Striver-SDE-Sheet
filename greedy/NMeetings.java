@@ -28,7 +28,7 @@ public class NMeetings {
         var meetings = new ArrayList<Meeting>();
         for(int i =0;i<n;i++) meetings.add(new Meeting(start[i], end[i]));
         Collections.sort(meetings);
-        int count = 0, endTime = meetings.get(0).end;
+        int count = 1, endTime = meetings.get(0).end;
         for(int i = 1;i<meetings.size();i++){
             var meet = meetings.get(i);
             if(meet.start>endTime){

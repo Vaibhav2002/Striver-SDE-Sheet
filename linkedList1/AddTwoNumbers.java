@@ -17,7 +17,7 @@ public class AddTwoNumbers {
                 temp2 = temp2.next;
             sumEnd = sumEnd.next;
         }
-        if(carry!=0) sumEnd.next = new ListNode(carry);
+        if (carry != 0) sumEnd.next = new ListNode(carry);
         return sum.next;
     }
 }

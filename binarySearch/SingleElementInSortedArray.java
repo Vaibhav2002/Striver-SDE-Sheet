@@ -12,8 +12,7 @@ public class SingleElementInSortedArray {
                 if (nums[mid] == nums[mid + 1]) //first occurrence at correct index
                     l = mid + 1;
                 else u = mid - 1;
-            }
-            else{
+            } else {
                 if (nums[mid] != nums[mid + 1]) //last occurrence at correct index
                     l = mid + 1;
                 else u = mid - 1;

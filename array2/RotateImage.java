@@ -9,6 +9,17 @@ import java.util.Scanner;
  * Incomplete
  */
 public class RotateImage {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[][] a = new int[n][n];
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                a[i][j] = sc.nextInt();
+        new RotateImage().rotate(a);
+        System.out.println(Arrays.deepToString(a));
+    }
+
     public void rotate(int[][] matrix) {
         int n = matrix.length;
         for (int i = 0; i < n; i++) {
@@ -22,16 +33,5 @@ public class RotateImage {
         int temp = a[i][j];
         a[i][j] = a[i1][j1];
         a[i1][j1] = temp;
-    }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int a[][] = new int[n][n];
-        for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++)
-                a[i][j] = sc.nextInt();
-        new RotateImage().rotate(a);
-        System.out.println(Arrays.deepToString(a));
     }
 }

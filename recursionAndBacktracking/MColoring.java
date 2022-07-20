@@ -7,17 +7,17 @@ import java.util.ArrayList;
  **/
 public class MColoring {
 
-    public boolean graphColoring(boolean graph[][], int m, int n) {
+    public boolean graphColoring(boolean[][] graph, int m, int n) {
         var adj = getAdjList(graph, n);
         int[] color = new int[n];
         return canColor(adj, 0, n, m, color);
     }
 
-    private ArrayList<Integer>[] getAdjList(boolean[][] graph, int n){
+    private ArrayList<Integer>[] getAdjList(boolean[][] graph, int n) {
         ArrayList<Integer>[] adj = new ArrayList[n];
-        for(int i=0;i<n;i++) adj[i] = new ArrayList<>();
-        for(int i=0;i<n;i++)
-            for(int j = 0;j<n;j++) if(graph[i][j]) adj[i].add(j);
+        for (int i = 0; i < n; i++) adj[i] = new ArrayList<>();
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++) if (graph[i][j]) adj[i].add(j);
         return adj;
     }
 
@@ -26,7 +26,7 @@ public class MColoring {
         for (int i = 1; i <= m; i++)
             if (isSafe(adj[node], color, i)) {
                 color[node] = i;
-                if(canColor(adj, node + 1, n, m, color)) return true;
+                if (canColor(adj, node + 1, n, m, color)) return true;
                 color[node] = 0;
             }
         return false;

@@ -5,18 +5,6 @@ package linkedListAndArray;
  **/
 public class CopyListWithRandomPointer {
 
-    private static class Node {
-        int val;
-        Node next;
-        Node random;
-
-        public Node(int val) {
-            this.val = val;
-            this.next = null;
-            this.random = null;
-        }
-    }
-
     public Node copyRandomList(Node head) {
         insertCopyNodes(head);
         copyRandomPointer(head);
@@ -51,5 +39,17 @@ public class CopyListWithRandomPointer {
             copyEnd = copyEnd.next;
         }
         return copy.next;
+    }
+
+    private static class Node {
+        int val;
+        Node next;
+        Node random;
+
+        public Node(int val) {
+            this.val = val;
+            this.next = null;
+            this.random = null;
+        }
     }
 }

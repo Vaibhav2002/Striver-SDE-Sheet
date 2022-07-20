@@ -23,7 +23,7 @@ public class PascalTriangle {
             if (i != row) sum += ans.get(row - 1).get(i);
             ans.get(row).add(sum);
         }
-        dfs(row+1, n, ans);
+        dfs(row + 1, n, ans);
     }
 
 

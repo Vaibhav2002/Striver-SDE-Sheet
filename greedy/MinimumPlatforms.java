@@ -6,7 +6,7 @@ import java.util.Arrays;
  * <a href="https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1#">Problem</a>
  **/
 public class MinimumPlatforms {
-    static int findPlatform(int arr[], int dep[], int n) {
+    static int findPlatform(int[] arr, int[] dep, int n) {
         Arrays.sort(arr);
         Arrays.sort(dep);
         int ans = 0, platforms = 1;

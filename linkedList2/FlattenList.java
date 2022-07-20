@@ -4,18 +4,6 @@ package linkedList2;
  * <a href="https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1">Problem</a>
  **/
 public class FlattenList {
-    private static class Node {
-        int data;
-        Node next;
-        Node bottom;
-
-        Node(int d) {
-            data = d;
-            next = null;
-            bottom = null;
-        }
-    }
-
     Node flatten(Node root) {
         if (root == null || root.next == null) return root;
         var right = flatten(root.next);
@@ -38,5 +26,17 @@ public class FlattenList {
         if (temp != null) dummyEnd.bottom = temp;
         if (temp2 != null) dummyEnd.bottom = temp2;
         return dummy.bottom;
+    }
+
+    private static class Node {
+        int data;
+        Node next;
+        Node bottom;
+
+        Node(int d) {
+            data = d;
+            next = null;
+            bottom = null;
+        }
     }
 }

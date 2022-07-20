@@ -6,7 +6,7 @@ package array3;
 public class MajorityElement {
     public int majorityElement(int[] nums) {
         int candidate = getCandidate(nums);
-        return isMajority(nums, candidate)?candidate:-1;
+        return isMajority(nums, candidate) ? candidate : -1;
     }
 
     private int getCandidate(int[] a) {

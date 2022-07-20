@@ -1,18 +1,18 @@
 package linkedListAndArray;
 
 /**
-* <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">Problem</a>
-**/
+ * <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">Problem</a>
+ **/
 public class RemoveDuplicates {
     public int removeDuplicates(int[] nums) {
-        if(nums.length <=1) return nums.length;
+        if (nums.length <= 1) return nums.length;
         int i = 0, j = 0;
-        while(++j<nums.length){
-            if(nums[i] != nums[j]){
+        while (++j < nums.length) {
+            if (nums[i] != nums[j]) {
                 i++;
                 nums[i] = nums[j];
             }
         }
-        return i+1;
+        return i + 1;
     }
 }

@@ -1,9 +1,6 @@
 package array4;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 
 /**
  * <a href="https://leetcode.com/problems/longest-consecutive-sequence/">Problem</a>

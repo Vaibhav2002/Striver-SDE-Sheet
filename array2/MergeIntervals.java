@@ -14,7 +14,7 @@ public class MergeIntervals {
         int start = intervals[0][0], end = intervals[0][1];
         for (int[] i : intervals) {
             if (i[0] >= start && i[0] <= end) end = Math.max(i[1], end);
-            else{
+            else {
                 ans.add(new int[]{start, end});
                 start = i[0];
                 end = i[1];
@@ -22,7 +22,7 @@ public class MergeIntervals {
         }
         ans.add(new int[]{start, end});
         int[][] a = new int[ans.size()][2];
-        for(int i=0;i< ans.size();i++) a[i] = ans.get(i);
+        for (int i = 0; i < ans.size(); i++) a[i] = ans.get(i);
         return a;
     }
 }

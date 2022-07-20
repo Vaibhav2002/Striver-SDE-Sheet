@@ -10,7 +10,7 @@ public class NthRoot {
         while (high - low > eps) {
             double mid = low + (high - low) / 2;
             double pow = Math.pow(mid, n);
-            if(high - low <= eps) return mid;
+            if (high - low <= eps) return mid;
             if (pow == m) return mid;
             if (pow < m) low = mid;
             else high = mid;

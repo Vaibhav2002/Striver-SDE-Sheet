@@ -11,8 +11,8 @@ public class CheckPalindrome {
         ListNode mid = findMid(head).next;
         mid = reverse(mid);
         ListNode temp = head;
-        while(mid!=null){
-            if(temp.val != mid.val) return false;
+        while (mid != null) {
+            if (temp.val != mid.val) return false;
             temp = temp.next;
             mid = mid.next;
         }

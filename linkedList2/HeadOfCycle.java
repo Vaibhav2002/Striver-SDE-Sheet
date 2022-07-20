@@ -8,13 +8,13 @@ import linkedList1.node.ListNode;
 public class HeadOfCycle {
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head, fast = head;
-        do{
+        do {
             slow = slow.next;
-            if(fast == null || fast.next == null) return null;
+            if (fast == null || fast.next == null) return null;
             fast = fast.next.next;
-        }while(slow!=fast);
+        } while (slow != fast);
         slow = head;
-        while(slow!=fast){
+        while (slow != fast) {
             fast = fast.next;
             slow = slow.next;
         }

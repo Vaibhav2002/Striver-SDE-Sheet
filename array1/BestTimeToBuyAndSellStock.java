@@ -1,8 +1,8 @@
 package array1;
 
 /**
-* <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">Problem</a>
-**/
+ * <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">Problem</a>
+ **/
 public class BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
         int buyingPrice = prices[0];

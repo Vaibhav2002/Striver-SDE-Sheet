@@ -13,13 +13,13 @@ public class TopKFreq {
         var map = new HashMap<Integer, Integer>();
         for (int i : nums) map.merge(i, 1, Integer::sum);
         var pq = new PriorityQueue<Map.Entry<Integer, Integer>>(Comparator.comparingInt(Map.Entry::getValue));
-        for(Map.Entry<Integer, Integer> entry:map.entrySet()){
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             pq.add(entry);
-            if(pq.size()>k) pq.poll();
+            if (pq.size() > k) pq.poll();
         }
         int[] ans = new int[k];
         int index = 0;
-        while(!pq.isEmpty())
+        while (!pq.isEmpty())
             ans[index++] = pq.poll().getKey();
         return ans;
     }

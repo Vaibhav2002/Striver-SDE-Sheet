@@ -8,12 +8,12 @@ import java.util.Arrays;
 public class ChessTournament {
     public static int chessTournament(int[] positions, int n, int c) {
         Arrays.sort(positions);
-        int l = 1, u = positions[n-1] - positions[0];
-        while(l<=u){
-            int mid = l+(u-l)/2;
-            if(isPossible(positions, mid, c))
-                l = mid+1;
-            else u = mid-1;
+        int l = 1, u = positions[n - 1] - positions[0];
+        while (l <= u) {
+            int mid = l + (u - l) / 2;
+            if (isPossible(positions, mid, c))
+                l = mid + 1;
+            else u = mid - 1;
         }
         return u;
     }
@@ -25,7 +25,7 @@ public class ChessTournament {
             if (pos[i] - cur >= minDist) {
                 cur = pos[i];
                 n--;
-                if(n == 0) return true;
+                if (n == 0) return true;
             }
         }
         return n < 0;

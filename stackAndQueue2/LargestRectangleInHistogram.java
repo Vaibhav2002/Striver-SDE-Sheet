@@ -29,7 +29,6 @@ public class LargestRectangleInHistogram {
     }
 
     private int[] getPostMin(int[] heights) {
-        Stack<Integer> st = new Stack<>();
         int n = heights.length;
         int[] post = new int[n];
         post[n-1] = n;

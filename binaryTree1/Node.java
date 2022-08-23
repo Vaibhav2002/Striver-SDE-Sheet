@@ -5,7 +5,8 @@ package binaryTree1;
  */
 public class Node {
     int data;
-    Node left, right;
+    public Node left;
+    public Node right;
 
     public Node(int item) {
         data = item;

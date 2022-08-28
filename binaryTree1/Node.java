@@ -4,7 +4,7 @@ package binaryTree1;
  * Node object used in GFG problems
  */
 public class Node {
-    int data;
+    public int data;
     public Node left;
     public Node right;
 

@@ -16,7 +16,7 @@ public class KthSmallest {
     private int iterative(TreeNode root, int k) {
         TreeNode temp = root;
         var st = new Stack<TreeNode>();
-        while (temp != null || st.isEmpty()) {
+        while (temp != null || !st.isEmpty()) {
             while (temp != null) {
                 st.push(temp);
                 temp = temp.left;
